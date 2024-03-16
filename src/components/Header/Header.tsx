@@ -45,6 +45,23 @@ const Header = () => {
             <NavLink to="/welcome" className={'logo'} />
             <div className={'content-btn'}>
               
+            <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                }}
+              >
+                {/* {store.authStore.login ? (
+                  <BtnAccount showBtn="home" />
+                ) : (
+                  <BtnAccount showBtn="signup" />
+                )}
+                {store.authStore.login ? (
+                  <BtnAccount showBtn="logout" />
+                ) : (
+                  <BtnAccount showBtn="login" />
+                )} */}
+              </div>
               
             </div>
           </div>
