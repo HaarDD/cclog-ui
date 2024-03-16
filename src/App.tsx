@@ -4,6 +4,7 @@ import React from 'react'
 import Header from './components/Header';
 import NotFoundPage from './pages/NotFoundPage';
 import AuthPage from './pages/AuthPage';
+import MainPage from './pages/MainPage';
 
 function App() {
   // const store = useContext(StoreContext);
@@ -19,8 +20,8 @@ function App() {
           path="/main"
           element={
             // <CheckingAuth userAccess={true} otherPath={'/auth'}>
-            // <MainPage />
-            <div style={{ width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}> <p style={{ color: 'red', fontSize: '50px' }}>CClog Main Page</p> </div>
+            <MainPage />
+            // <div style={{ width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}> <p style={{ color: 'red', fontSize: '50px' }}>CClog Main Page</p> </div>
             // </CheckingAuth>
           }
         />

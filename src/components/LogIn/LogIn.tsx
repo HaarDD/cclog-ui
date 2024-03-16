@@ -40,11 +40,9 @@ const LogIn = () => {
   const onFinish = (values: UserDataLog) => {
     store.authStore.setLogin(values).then((success) => {
       if (success) {
-        console.log('не Хуй');
         store.authStore.newMessage('success', `Вы успешно вошли в систему, ${store.authStore.user.login}. С возвращением!`)
         // navigate('/main');
       } else {
-        console.log('Хуй');
       }
     });
   };
