@@ -5,32 +5,32 @@ import Header from './components/Header';
 import NotFoundPage from './pages/NotFoundPage';
 import AuthPage from './pages/AuthPage';
 import MainPage from './pages/MainPage';
+import { CheckingAuth } from './hoc/CheckingAuth';
+import Message from './components/Message';
 
 function App() {
   // const store = useContext(StoreContext);
   return (
     <>
       {/* {store.authStore.loaderIsReady ? <MySkeleton /> : null} */}
-      {/* <Message /> */}
-      {/* <Header /> */}
+      <Message />
       <Header />
       <Routes>
         <Route path="/" element={<Navigate to="/main" replace />} />
         <Route
           path="/main"
           element={
-            // <CheckingAuth userAccess={true} otherPath={'/auth'}>
-            <MainPage />
-            // <div style={{ width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}> <p style={{ color: 'red', fontSize: '50px' }}>CClog Main Page</p> </div>
-            // </CheckingAuth>
+            <CheckingAuth userAccess={true} otherPath={'/auth'}>
+              <MainPage />
+            </CheckingAuth>
           }
         />
         <Route
           path="/auth/:page"
           element={
-            // <CheckingAuth userAccess={false} otherPath={'/main'}>
+            <CheckingAuth userAccess={false} otherPath={'/main'}>
               <AuthPage />
-            // </CheckingAuth>
+            </CheckingAuth>
           }
         />
         <Route path="/auth" element={<Navigate to="/auth/login" replace />} />
