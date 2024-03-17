@@ -32,7 +32,7 @@ class AuthStore {
 
   setLogin(oldUser: IUserStore) {
 
-  return  axios.post('http://192.168.1.100:8092/api/auth/login', {
+  return  axios.post('https://loud-beans-shout.loca.lt/api/auth/login', {
   login: oldUser.login,
   password: oldUser.password
   }, {
