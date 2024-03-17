@@ -72,7 +72,7 @@ export type SuccessUser = {
 
 export type typeMessage = 'success' | 'error' | 'loading';
 
-// export type typeBtnAuth = 'login' | 'signup' | 'logout' | 'home'; 
+export type typeBtnAuth = 'login' | 'signup' | 'logout'; 
 
 export type MessageInfo = {
   isReady: boolean;

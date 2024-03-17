@@ -8,6 +8,7 @@ import { observer } from 'mobx-react-lite';
 // import BtnLocale from '../BtnLocale';
 import { Affix, Drawer, DrawerProps, Space } from 'antd';
 import { MenuOutlined } from '@ant-design/icons';
+import BtnAccount from '../BtnAccount';
 
 const Header = () => {
   // const store = useContext(StoreContext);
@@ -42,7 +43,7 @@ const Header = () => {
       >
         <div className='header-content'>
           <div className='header-desktop'>
-            <NavLink to="/welcome" className={'logo'} />
+            <NavLink to="/" className={'logo'} />
             <div className={'content-btn'}>
               
             <div
@@ -51,22 +52,21 @@ const Header = () => {
                   flexDirection: 'row',
                 }}
               >
-                {/* {store.authStore.login ? (
-                  <BtnAccount showBtn="home" />
-                ) : (
+                {/* {store.authStore.login ? ( */}
+                {/* ) : ( */}
                   <BtnAccount showBtn="signup" />
-                )}
-                {store.authStore.login ? (
-                  <BtnAccount showBtn="logout" />
-                ) : (
+                {/* )} */}
                   <BtnAccount showBtn="login" />
-                )} */}
+                {/* {store.authStore.login ? ( */}
+                {/* ) : ( */}
+                  <BtnAccount showBtn="logout" />
+                {/* )} */}
               </div>
               
             </div>
           </div>
           <div className={'header-mobile'}>
-            <NavLink to="/welcome" className={'logo'}></NavLink>
+            <NavLink to="/" className={'logo'}></NavLink>
             
             <MenuOutlined
               onClick={showDrawer}
